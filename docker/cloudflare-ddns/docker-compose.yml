@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+  cloudflare-ddns:
+    image: realshaunoneill/cloudflare-ddns:latest
+    container_name: cloudflare-ddns
+    restart: no
+    environment:
+      - CLOUDFLARE_API_KEY=${CLOUDFLARE_API_KEY}
+      - DNS_URL=${DNS_URL}
+      - PROXIED=${PROXIED}
+      - CRON_SCHEDULE=${CRON_SCHEDULE}
+      - WEBHOOK_URL=${WEBHOOK_URL}
+      - WEBHOOK_METHOD=${WEBHOOK_METHOD}
