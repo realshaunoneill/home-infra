@@ -1,0 +1,22 @@
+version: "3.3"
+services:
+  homepage:
+    image: ghcr.io/benphelps/homepage:latest
+    container_name: homepage
+    ports:
+      - 3000:3000
+    volumes:
+      - /opt/homepage/config:/app/config # Make sure your local config directory exists
+      - /var/run/docker.sock:/var/run/docker.sock:ro # optional, for docker integrations
+    restart: unless-stopped
+    environment:
+      - HOMEPAGE_VAR_PLEX_API_KEY=${HOMEPAGE_VAR_PLEX_API_KEY}
+      - HOMEPAGE_VAR_TAUTULLI_API_KEY=${HOMEPAGE_VAR_TAUTULLI_API_KEY}
+      - HOMEPAGE_VAR_RADARR_API_KEY=${HOMEPAGE_VAR_RADARR_API_KEY}
+      - HOMEPAGE_VAR_SONARR_API_KEY=${HOMEPAGE_VAR_SONARR_API_KEY}
+      - HOMEPAGE_VAR_OVERSEER_API_KEY=${HOMEPAGE_VAR_OVERSEER_API_KEY}
+      - HOMEPAGE_VAR_PROXMOX_API_KEY=${HOMEPAGE_VAR_PROXMOX_API_KEY}
+      - HOMEPAGE_VAR_PORTAINER_API_KEY=${HOMEPAGE_VAR_PORTAINER_API_KEY}
+      - HOMEPAGE_VAR_PIHOLE_API_KEY=${HOMEPAGE_VAR_PIHOLE_API_KEY}
+      - HOMEPAGE_VAR_NGINX_USER=${HOMEPAGE_VAR_NGINX_USER}
+      - HOMEPAGE_VAR_NGINX_PASSWORD=${HOMEPAGE_VAR_NGINX_PASSWORD}

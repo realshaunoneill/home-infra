@@ -1,0 +1,18 @@
+---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/en/configs/docker/
+
+# my-docker:
+#   host: 127.0.0.1
+#   port: 2375
+
+docker:
+  socket: /var/run/docker.sock
+
+cevo:
+  host: cevo.lan
+  port: 2375
+
+moni:
+  host: moni.lan
+  port: 2375

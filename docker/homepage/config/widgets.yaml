@@ -1,0 +1,30 @@
+---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/en/configs/widgets
+
+- logo:
+    icon: mdi-server
+
+- resources:
+    label: System
+    expanded: true
+    cpu: true
+    memory: true
+
+- resources:
+    label: /
+    expanded: true
+    disk: /
+
+- resources:
+    label: disk1
+    expanded: true
+    disk: /mnt/disk1
+
+- weatherapi:
+    label: your_city
+    latitude: yours_latiture
+    longitude: yours_longiture
+    units: metric
+    apiKey: replace
+    cache: 5

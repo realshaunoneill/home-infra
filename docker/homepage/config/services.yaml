@@ -1,0 +1,127 @@
+---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/en/configs/services
+
+- Media:
+    - Plex:
+        icon: plex.png
+        href: https://plex.home.shaunoneill.com
+        description: Media Server
+        server: cevo
+        container: plex
+        widget:
+            type: plex
+            url: https://plex.home.shaunoneill.com
+            key: {{HOMEPAGE_VAR_PLEX_API_KEY}}
+
+    - Tautulli:
+        icon: tautulli.png
+        href: https://tautulli.home.shaunoneill.com
+        description: Plex Stats
+        server: docker
+        container: tautulli
+        widget:
+            type: tautulli
+            url: https://tautulli.home.shaunoneill.com
+            key: {{HOMEPAGE_VAR_TAUTULLI_API_KEY}}
+
+    - Overseerr:
+        icon: overseerr.png
+        href: https://overseer.home.shaunoneill.com/
+        description: Media Requests
+        server: docker
+        container: overseerr
+        widget:
+            type: overseerr
+            url: https://overseer.home.shaunoneill.com/
+            key: {{HOMEPAGE_VAR_OVERSEER_API_KEY}}
+
+- Media Management:
+    - Sonarr:
+        icon: sonarr.png
+        href: https://sonarr.home.shaunoneill.com
+        description: Series management
+        server: docker
+        container: sonarr
+        widget:
+          type: sonarr
+          url: https://sonarr.home.shaunoneill.com
+          key: {{HOMEPAGE_VAR_SONARR_API_KEY}}
+        
+    - Radarr:
+        icon: radarr.png
+        href: https://radarr.home.shaunoneill.com
+        description: Movie management
+        server: docker
+        container: radarr
+        widget:
+          type: radarr
+          url: https://radarr.home.shaunoneill.com
+          key: {{HOMEPAGE_VAR_RADARR_API_KEY}}
+
+- Network Management:
+    - Proxmox:
+        icon: proxmox.png
+        href: https://proxmox.home.shaunoneill.com
+        description: Proxmox
+        widget:
+            type: proxmox
+            url: https://proxmox.home.shaunoneill.com
+            username: root@pam!homepage
+            password: {{HOMEPAGE_VAR_PROXMOX_API_KEY}}
+            # node: pve-1 # optional
+
+    - NGINX Proxy Manager:
+        icon: nginx-proxy-manager.png
+        href: https://nginx.home.shaunoneill.com
+        description: Reverse Proxy Management
+        server: moni
+        container: nginx-proxy-manager
+        widget:
+          type: npm
+          url: https://nginx.home.shaunoneill.com
+          username: {{HOMEPAGE_VAR_NGINX_USER}}
+          password: {{HOMEPAGE_VAR_NGINX_PASSWORD}}
+
+    - Portainer (Cevo):
+        icon: portainer.png
+        href: https://portainer.home.shaunoneill.com
+        description: Docker Container Management
+        server: cevo
+        container: portainer_portainer_1
+        widget:
+          type: portainer
+          url: https://portainer.home.shaunoneill.com
+          env: 1
+          key: {{HOMEPAGE_VAR_PORTAINER_API_KEY}}
+    
+    - Portainer (Zepher):
+        icon: portainer.png
+        href: https://portainer.home.shaunoneill.com
+        description: Docker Container Management
+        server: cevo
+        container: portainer_portainer_1
+        widget:
+          type: portainer
+          url: https://portainer.home.shaunoneill.com
+          env: 4
+          key: {{HOMEPAGE_VAR_PORTAINER_API_KEY}}
+
+    - Pi Hole:
+        icon: pi-hole.png
+        href: https://pihole.home.shaunoneill.com
+        description: Network Protection
+        widget:
+          type: pihole
+          url: https://pihole.home.shaunoneill.com
+          key: {{HOMEPAGE_VAR_PIHOLE_API_KEY}}
+
+- My Second Group:
+    - My Second Service:
+        href: http://localhost/
+        description: Homepage is the best
+
+- My Third Group:
+    - My Third Service:
+        href: http://localhost/
+        description: Homepage is 😎

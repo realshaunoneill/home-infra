@@ -1,0 +1,43 @@
+---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/en/configs/settings
+
+providers:
+  openweathermap: openweathermapapikey
+  weatherapi: weatherapiapikey
+
+headerStyle: boxed
+
+background: https://i.imgur.com/hOzzkCY.jpeg
+backgroundOpacity: 0.2
+
+target: _blank
+
+quicklaunch:
+    searchDescriptions: true
+    hideInternetSearch: true
+    hideVisitURL: true
+
+hideVersion: true
+
+layout:
+  Media:
+    icon: mdi-play-circle-outline
+    style: row
+    columns: 3
+  Media Management:
+    icon: mdi-download-circle-outline
+    style: row
+    columns: 4
+  Network Management:
+    icon: mdi-home-circle-outline
+    style: row
+    columns: 3
+  Containers:
+    icon: mdi-docker
+    style: row
+    columns: 3
+  Utilities:
+    icon: mdi-tools
+  Monitoring:
+    icon: mdi-database-eye-outline
