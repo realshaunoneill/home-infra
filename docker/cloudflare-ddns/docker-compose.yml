@@ -3,7 +3,7 @@ services:
   cloudflare-ddns:
     image: realshaunoneill/cloudflare-ddns:latest
     container_name: cloudflare-ddns
-    restart: no
+    restart: unless-stopped
     environment:
       - CLOUDFLARE_API_KEY=${CLOUDFLARE_API_KEY}
       - DNS_URL=${DNS_URL}
